@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         gameEnded = true;
         PlayerController player = GetPlayer(playerId);
 
-        //Set UI to show wijnenr
+        GameUI.instance.SetWinText(player.photonPlayer.NickName);
         Invoke("GoBackToMenu", 3.0f);
     }
 
