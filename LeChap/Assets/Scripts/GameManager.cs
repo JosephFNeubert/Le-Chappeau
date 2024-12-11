@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         if (!initialGive)
         {
-            GetPlayer(playerId).SetHat(false);
+            GetPlayer(playerWithHat).SetHat(false);
         }
 
         playerWithHat = playerId;
