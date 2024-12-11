@@ -87,5 +87,21 @@ public class GameManager : MonoBehaviourPunCallbacks
             return false;
         }
     }
+
+    [PunRPC]
+    void WinGame(int playerId)
+    {
+        gameEnded = true;
+        PlayerController player = GetPlayer(playerId);
+
+        //Set UI to show wijnenr
+        Invoke("GoBackToMenu", 3.0f);
+    }
+
+    void GoBackToMenu()
+    {
+        PhotonNetwork.LeaveRoom();
+        NetworkManager.instance.ChangeScene("Menu");
+    }
 }
 
