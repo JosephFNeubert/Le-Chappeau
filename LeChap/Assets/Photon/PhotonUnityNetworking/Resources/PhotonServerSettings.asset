@@ -38,6 +38,9 @@ MonoBehaviour:
   - DestroyRpc
   - ChangeScene
   - UpdateLobbyUI
+  - InGame
+  - Initialize
+  - GiveHat
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
